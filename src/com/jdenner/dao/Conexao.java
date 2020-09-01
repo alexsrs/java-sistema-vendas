@@ -24,9 +24,9 @@ public class Conexao {
             conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
             conexao.setAutoCommit(false);
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
-            throw new ClassNotFoundException("O driver de conex√£o n√£o foi adicionado ao projeto.\n" + e.getMessage());
+            throw new ClassNotFoundException("O driver de conex„o n„o foi adicionado ao projeto.\n" + e.getMessage());
         } catch (SQLException e) {
-            throw new SQLException("Problemas nos par√¢metros de conex√£o.\n" + e.getMessage());
+            throw new SQLException("Problemas nos parametros de conexao.\n" + e.getMessage());
         }
     }
 
@@ -38,7 +38,7 @@ public class Conexao {
         try {
             conexao.commit();
         } catch (SQLException e) {
-            throw new SQLException("Problemas na instru√ß√£o SQL.\n" + e.getMessage());
+            throw new SQLException("Problemas na instruÁ„o SQL.\n" + e.getMessage());
         } finally {
             conexao.close();
         }
